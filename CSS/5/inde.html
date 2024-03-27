@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pointer Events Explained</title>
+  </head>
+  <body>
+    <svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="10" height="10" fill="black" />
+      <circle
+        cx="5"
+        cy="5"
+        r="4"
+        fill="white"
+        pointer-events="visiblePainted"
+      />
+
+      <rect x="10" y="0" width="10" height="10" fill="black" />
+      <circle cx="15" cy="5" r="4" fill="white" pointer-events="none" />
+    </svg>
+    <script src="./script.js" />
+  </body>
+</html>
