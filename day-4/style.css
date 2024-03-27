@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  color: #fff;
+  font-size: 2rem;
+  max-width: 20ch;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.corner-borders {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.corner-borders::before,
+.corner-borders::after {
+  content: "";
+  border-color: #fff;
+  border-width: 4px;
+  display: block;
+  height: 50px;
+  width: 50px;
+  pointer-events: none;
+  position: absolute;
+}
+
+/* top left, bottom left */
+.corner-borders--left::after,
+.corner-borders--left::before {
+  left: 0;
+}
+
+/* top left */
+.corner-borders--left::before {
+  border-left-style: solid;
+  border-top-style: solid;
+  top: -5rem;
+}
+
+/* bottom left */
+.corner-borders--left::after {
+  border-bottom-style: solid;
+  border-left-style: solid;
+  bottom: -10rem;
+}
+
+/* top right , bottom right */
+.corner-borders--right::before,
+.corner-borders--right::after {
+  right: 0;
+}
+
+/* top right */
+.corner-borders--right::before {
+  border-right-style: solid;
+  border-top-style: solid;
+  top: -5rem;
+}
+
+.corner-borders--right::after {
+  border-bottom-style: solid;
+  border-right-style: solid;
+  bottom: -10rem;
+}
